@@ -5,10 +5,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: $header-height;
+  min-height: $header-height;
   padding: $header-padding #{2 * $header-padding};
   border-bottom: 2px solid $color-saffron;
-  box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
 }
