@@ -8,19 +8,27 @@ import {RouterModule} from "@angular/router";
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatRippleModule} from "@angular/material/core";
+import {MenuOptionComponent} from "./header/menu-option/menu-option.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    MenuOptionComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    MatIconModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
