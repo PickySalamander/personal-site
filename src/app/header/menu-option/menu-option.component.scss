@@ -8,9 +8,14 @@
   align-items: center;
 }
 
-.mat-button {
+a {
   color: $color-saffron;
-  font-size: 18px;
+  font-size: 1.25rem;
+  transition: all 500ms;
+
+  &:hover, &.selected {
+    color: $color-burnt-sienna;
+  }
 }
 
 .dot {
