@@ -1,0 +1,10 @@
+@import "src/styles/globals";
+
+:host {
+  display: block;
+  width: $header-height;
+  height: 100%;
+  padding: $header-padding;
+  box-sizing: border-box;
+  border-right: 2px solid $color-saffron;
+}

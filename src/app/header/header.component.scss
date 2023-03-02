@@ -1,0 +1,20 @@
+@import "src/styles/globals";
+
+:host {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  padding: $header-padding;
+  background-color: $color-charcoal;
+  border-bottom: 2px solid $color-saffron;
+  box-sizing: border-box;
+}
+
+.icon img {
+  display: block;
+  background-image: url("/assets/personal-logo.svg");
+  max-height: 100%;
+  background-repeat: no-repeat;
+}
