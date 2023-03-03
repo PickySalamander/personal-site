@@ -1,0 +1,77 @@
+@import "src/styles/globals";
+
+:host {
+  max-width: 1024px;
+}
+
+.exp-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.timeline {
+  border-left: 2px solid $color-saffron;
+  padding-left: 1rem;
+
+  & > * {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    color: $color-saffron;
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
+    & > * {
+      transition: all 500ms;
+    }
+
+    .year {
+      position: absolute;
+      left: calc(-2rem - 2px);
+      transform: translateX(-100%);
+      opacity: 25%;
+    }
+
+    .dot {
+      position: absolute;
+      background-color: $color-burnt-sienna;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      left: calc(-1rem - 5px);
+      top: calc(50% - 3px);
+    }
+
+    &:hover {
+      .dot {
+        background-color: $color-sandy-brown;
+      }
+
+      .year {
+        opacity: 75%;
+      }
+
+      .text {
+        color: $color-sandy-brown;
+      }
+    }
+
+    &:active, &.selected {
+      .dot {
+        background-color: $color-sandy-brown;
+      }
+
+      .year {
+        opacity: 75%;
+      }
+
+      .text {
+        color: $color-burnt-sienna;
+      }
+    }
+  }
+}

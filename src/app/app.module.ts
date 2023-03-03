@@ -10,6 +10,7 @@ import {HomeComponent} from './pages/home/home.component';
 import {MenuOptionComponent} from "./header/menu-option/menu-option.component";
 import {AboutComponent} from './pages/about/about.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
+import { ExpDescriptionComponent } from './pages/experience/exp-description/exp-description.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ExperienceComponent } from './pages/experience/experience.component';
     HomeComponent,
     MenuOptionComponent,
     AboutComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ExpDescriptionComponent
   ],
   imports: [
     BrowserModule,

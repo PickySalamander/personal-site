@@ -1,1 +1,21 @@
-<p>experience works!</p>
+<div>
+  <h1>Experience</h1>
+
+  <div class="exp-container">
+    <div class="timeline">
+      <a *ngFor="let item of list" [routerLink]="item.link" routerLinkActive="selected">
+        <span class="year">
+          {{item.yearStart}}
+        </span>
+
+        <span class="dot"></span>
+
+        <span class="text">{{item.name}}</span>
+      </a>
+    </div>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

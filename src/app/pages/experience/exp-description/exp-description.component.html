@@ -1,0 +1,76 @@
+<ng-container [ngSwitch]="job">
+  <ng-container *ngSwitchDefault>
+    <h3>Self Employed - New York, NY</h3>
+    <sub>Game Developer | 2022 - Present</sub>
+
+    <ul>
+      <li>Developing Angular-based puzzle game that mixes document mystery and ancestry research. The main character
+        uncovers the root cause of a family curse while trying to find out how to stop it from happening to her.
+      </li>
+      <li>Working as sole developer, artist, and designer, building the game from the ground up.</li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'sciolytix'">
+    <h3>Sciolytix (formerly Selleration) - New York, NY</h3>
+    <sub>Lead Product Architect | 2013 - 2022</sub>
+
+    <ul>
+      <li>Starting as a single-person development team, built the flagship product UPtick from the ground up. UPtick is
+        a simulation training platform built in Java, Unity, Oculus, MySQL, and Angular.
+      </li>
+      <li>Acted as system administrator keeping all services running on a variety of Amazon services (EC2, S3,
+        Cloudfront, RDS, DynamoDB, Lambda, and more).
+      </li>
+      <li>Communicated directly with clients, assisting in technical support, design, and product installation.</li>
+      <li>Collaborated with the leadership team to build goals for the development team.</li>
+      <li>Developed machine learning pipeline used to predict success of users.</li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'kuma'">
+    <h3>Kuma Reality Games - New York, NY</h3>
+    <sub>Developer | 2011 - 2013</sub>
+    <ul>
+      <li>Worked on a social media platform called ScatterRadio which allowed users to record and stream audio messages.
+        Worked primarily in Flash, HTML, MySQL, and PHP.
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'brandgames'">
+    <h3>BrandGames - New York, NY</h3>
+    <sub>Lead Developer | 2009 - 2011</sub>
+    <ul>
+      <li>Developed marketing and training games for a variety of Fortune 500 companies, working primarily in Flash,
+        HTML, Unity, SCORM, and ASP.net.
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'rebelmonkey'">
+    <h3>Rebel Monkey - New York, NY</h3>
+    <sub>Game Developer | 2008 - 2009</sub>
+    <ul>
+      <li>Developed Java servers for a variety of multiplayer Flash games hosted on early Amazon EC2.</li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'tfc'">
+    <h3>Tech for Campaigns</h3>
+    <sub>Frontend Developer | 2018 - Present</sub>
+    <ul>
+      <li>Working on an all-volunteer team, setting up WordPress sites for grassroots political campaigns.</li>
+      <li>Train new volunteer frontend developers.</li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'surj'">
+    <h3>Showing Up for Racial Justice, NYC Chapter</h3>
+    <sub>Communications Volunteer | 2020 - Present</sub>
+    <ul>
+      <li>Help manage communications to more than 23,000 members through the EveryAction CRM.</li>
+      <li>Train new volunteers on how to use EveryAction and communicate with membership.</li>
+    </ul>
+  </ng-container>
+</ng-container>
