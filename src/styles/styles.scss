@@ -8,14 +8,40 @@ body {
   margin: 0;
   font-family: "Roboto Slab", serif;
   color: $color-saffron;
+  font-size: 20px;
 }
 
 a {
   cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  color: $color-sandy-brown;
+  transition: all 500ms;
+
+  &:hover {
+    color: $color-burnt-sienna;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: $color-sandy-brown;
+  border: 1px solid $color-sandy-brown;
+
+  &:hover {
+    background-color: rgba($color-sandy-brown, 0.25);
+    color: $color-sandy-brown;
+  }
 }
 
 h1, h2, h3 {
   color: $color-burnt-sienna;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 * {

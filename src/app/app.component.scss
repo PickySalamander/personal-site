@@ -21,10 +21,13 @@ app-header {
   overflow: hidden;
 
   .outlet {
-    padding: 0 2em;
+    padding: 0 2rem;
     width: 100%;
     height: 100%;
     overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
