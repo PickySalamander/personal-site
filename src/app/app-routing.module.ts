@@ -4,6 +4,7 @@ import {HomeComponent} from "./pages/home/home.component";
 import {AboutComponent} from "./pages/about/about.component";
 import {ExperienceComponent} from "./pages/experience/experience.component";
 import {ExpDescriptionComponent} from "./pages/experience/exp-description/exp-description.component";
+import {WorkComponent} from "./pages/work/work.component";
 
 const routes:Routes = [
   {
@@ -27,6 +28,10 @@ const routes:Routes = [
         redirectTo: "self"
       }
     ]
+  },
+  {
+    path: 'projects',
+    component: WorkComponent
   },
   {
     path: "**",

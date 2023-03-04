@@ -26,12 +26,10 @@ app-header {
     height: 100%;
     overflow: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
-.gradients {
+.background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -40,7 +38,7 @@ app-header {
   background-color: $color-charcoal;
   z-index: 0;
 
-  .left, .right {
+  .left, .right, .texture {
     position: absolute;
     width: $header-height;
     height: 100%;
@@ -49,11 +47,18 @@ app-header {
 
   .left {
     left: 0;
-    background: linear-gradient(90deg, rgba($color-persian-green, 0.25) 0%, rgba($color-charcoal, 0) 50%);
+    background: linear-gradient(90deg, rgba($color-persian-green, 0.1) 0%, rgba($color-charcoal, 0) 50%);
   }
 
   .right {
     right: 0;
-    background: linear-gradient(-90deg, rgba($color-persian-green, 0.25) 0%, rgba($color-charcoal, 0) 50%);
+    background: linear-gradient(-90deg, rgba($color-persian-green, 0.1) 0%, rgba($color-charcoal, 0) 50%);
+  }
+
+  .texture {
+    width: 100%;
+    background-image: url("/assets/texture.png");
+    background-size: cover;
+    opacity: 5%;
   }
 }

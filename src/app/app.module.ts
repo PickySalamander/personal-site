@@ -11,6 +11,8 @@ import {MenuOptionComponent} from "./header/menu-option/menu-option.component";
 import {AboutComponent} from './pages/about/about.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { ExpDescriptionComponent } from './pages/experience/exp-description/exp-description.component';
+import { WorkComponent } from './pages/work/work.component';
+import { WorkDescComponent } from './pages/work/work-desc/work-desc.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ExpDescriptionComponent } from './pages/experience/exp-description/exp-
     MenuOptionComponent,
     AboutComponent,
     ExperienceComponent,
-    ExpDescriptionComponent
+    ExpDescriptionComponent,
+    WorkComponent,
+    WorkDescComponent
   ],
   imports: [
     BrowserModule,
