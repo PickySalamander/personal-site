@@ -10,17 +10,14 @@
   border-bottom: 2px solid $color-saffron;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .icon {
+  display: block;
   height: 100%;
-
-  img {
-    display: block;
-    background-image: url("/assets/personal-logo.svg");
-    height: 100%;
-    background-repeat: no-repeat;
-  }
+  aspect-ratio: 1/1;
+  background-image: url("/assets/personal-logo.svg");
 }
 
 .menu {

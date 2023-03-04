@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  started:"intro" | "fade" | "done" = "intro";
+
+  onIntroComplete() {
+    this.started = "fade";
+
+    setTimeout(() => this.started = "done", 500);
+  }
 }

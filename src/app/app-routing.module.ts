@@ -9,14 +9,17 @@ import {WorkComponent} from "./pages/work/work.component";
 const routes:Routes = [
   {
     path: '',
+    title: "Joe - Home",
     component: HomeComponent
   },
   {
     path: 'about',
+    title: "Joe - About Me",
     component: AboutComponent
   },
   {
     path: 'experience',
+    title: "Joe - Experience",
     component: ExperienceComponent,
     children: [
       {
@@ -31,6 +34,7 @@ const routes:Routes = [
   },
   {
     path: 'projects',
+    title: "Joe - Projects",
     component: WorkComponent
   },
   {

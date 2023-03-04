@@ -13,6 +13,7 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { ExpDescriptionComponent } from './pages/experience/exp-description/exp-description.component';
 import { WorkComponent } from './pages/work/work.component';
 import { WorkDescComponent } from './pages/work/work-desc/work-desc.component';
+import { StartupComponent } from './startup/startup.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { WorkDescComponent } from './pages/work/work-desc/work-desc.component';
     ExperienceComponent,
     ExpDescriptionComponent,
     WorkComponent,
-    WorkDescComponent
+    WorkDescComponent,
+    StartupComponent
   ],
   imports: [
     BrowserModule,
