@@ -24,11 +24,14 @@ a {
 }
 
 .cta-button {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   color: $color-sandy-brown;
   border: 1px solid $color-sandy-brown;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
 
   &:hover {
     background-color: rgba($color-sandy-brown, 0.25);
@@ -76,15 +79,15 @@ code {
   font-weight: normal;
   font-style: normal;
   display: inline-flex;
-  vertical-align: top;
+  vertical-align: middle;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
-  direction: ltr;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
+
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
 

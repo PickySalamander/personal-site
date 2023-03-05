@@ -5,6 +5,7 @@ import {AboutComponent} from "./pages/about/about.component";
 import {ExperienceComponent} from "./pages/experience/experience.component";
 import {ExpDescriptionComponent} from "./pages/experience/exp-description/exp-description.component";
 import {WorkComponent} from "./pages/work/work.component";
+import {WorkDescComponent} from "./pages/work/work-desc/work-desc.component";
 
 const routes:Routes = [
   {
@@ -36,6 +37,11 @@ const routes:Routes = [
     path: 'projects',
     title: "Joe - Projects",
     component: WorkComponent
+  },
+  {
+    path: 'projects/:work',
+    title: "Joe - Projects",
+    component: WorkDescComponent
   },
   {
     path: "**",

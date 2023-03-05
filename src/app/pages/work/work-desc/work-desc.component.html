@@ -1,1 +1,27 @@
-<p>work-desc works!</p>
+<div class="desc">
+  <div class="text">
+    <h1>{{project.title}}</h1>
+
+    <div class="box">
+      <p *ngFor="let text of project.text" [innerHTML]="text"></p>
+
+      <code>{{project.code}}</code>
+    </div>
+
+    <p>
+      <a class="cta-button" routerLink="/projects"><span class="mat-icon">arrow_back</span> Back</a>
+    </p>
+  </div>
+
+  <div class="preview">
+    <ng-template [ngIf]="project.imageType == 'embed'" [ngIfElse]="picture">
+      <iframe [src]="embedUrl" title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </ng-template>
+
+    <ng-template #picture>
+      <img class="picture" [src]="project.image" alt="Image of {{project.title}}"/>
+    </ng-template>
+  </div>
+</div>

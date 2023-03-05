@@ -1,0 +1,59 @@
+@import "src/styles/globals";
+
+:host {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+}
+
+.desc {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  .text {
+    flex: 1 1 0;
+
+    .box {
+      background-color: lighten($color-charcoal, 10%);
+      border-radius: 4px;
+      padding: 1rem;
+
+      & > *:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .preview {
+    flex: 1 1 0;
+    text-align: center;
+
+    animation-name: slide-in;
+    animation-duration: 500ms;
+    animation-delay: 100ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+
+    .picture {
+      border-radius: 4px;
+      max-width: 100%;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
