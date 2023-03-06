@@ -18,6 +18,7 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap-reverse;
 
   .text {
     flex: 1 1 0;
@@ -26,6 +27,7 @@
       background-color: lighten($color-charcoal, 10%);
       border-radius: 4px;
       padding: 1rem;
+      min-width: 320px;
 
       & > *:first-child {
         margin-top: 0;
@@ -37,6 +39,7 @@
   .preview {
     flex: 1 1 0;
     text-align: center;
+    min-width: 320px;
 
     animation-name: slide-in;
     animation-duration: 500ms;

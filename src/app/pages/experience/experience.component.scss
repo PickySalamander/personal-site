@@ -12,6 +12,10 @@
   gap: 3rem;
   height: 100%;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .timeline {
