@@ -9,6 +9,13 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: $header-height;
+    border-right: none;
+    border-top: 2px solid $color-saffron;
+  }
 }
 
 .links {
@@ -17,6 +24,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+  }
 
   a {
     padding: 5px;
