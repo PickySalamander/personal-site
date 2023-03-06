@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 
-# This is a script that will handle automated releases after running "ng build"
+# This is a script that will handle automated releases after running "ng build". It will deploy all JS code and assets
+# to an S3 bucket, deleting previous files there beforehand. After uploading, the s3 bucket's index.html file will be
+# invalidated in cloudfront. Only the index.html, other files will not be invalidated. This doesn't matter for JS files
+# since angular changes the names, but if assets change they will need to be invalidated manually.
 
 bucket="jf-portfolio-web"
 distID="E1E52SK17Y9LID"

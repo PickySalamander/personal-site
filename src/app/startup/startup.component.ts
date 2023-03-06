@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 /**
  * This component controls the intro animation on the site. Most of the heavy lifting is done by CSS, but some
@@ -10,7 +10,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
   templateUrl: './startup.component.html',
   styleUrls: ['./startup.component.scss']
 })
-export class StartupComponent {
+export class StartupComponent implements OnInit {
   /** Notify the main page that the animation has completed and that it is time to fade in the rest of the site */
   @Output() onAnimationComplete:EventEmitter<void> = new EventEmitter<void>();
 
@@ -20,6 +20,18 @@ export class StartupComponent {
   /** The name of the last CSS animation that ran before the site can fade in. */
   private readonly finalEventName:string = "slide-to";
 
+  /** The timeout for backup finishing, canceled when the animation finishes */
+  private timeout:any;
+
+  ngOnInit() {
+    //make sure the animation eventually finishes, in case for some reason the animation doesn't work
+    this.timeout = setTimeout(() => {
+      if(!this.fadeOut) {
+        this.dispatchEvent();
+      }
+    }, 3000);
+  }
+
   /**
    * Called when each animation on the logo finishes
    * @param $event the event that triggered this
@@ -27,8 +39,16 @@ export class StartupComponent {
   onAnimation($event:AnimationEvent) {
     //if this is the correct animation then notify
     if($event.animationName == this.finalEventName) {
-      this.onAnimationComplete.emit();
-      this.fadeOut = true;
+      this.dispatchEvent();
     }
+  }
+
+  /** Notify the main page that the animation has completed and that it is time to fade in the rest of the site */
+  private dispatchEvent() {
+    this.onAnimationComplete.emit();
+    this.fadeOut = true;
+
+    //kill the timeout if it hasn't finished yet
+    clearTimeout(this.timeout);
   }
 }
