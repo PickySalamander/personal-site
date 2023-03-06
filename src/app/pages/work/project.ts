@@ -32,9 +32,9 @@ export const WorkProjects:Project[] = [
   {
     title: "Untitled Mystery Game",
     link: "current",
-    preview: "My current obsession, I’m creating a puzzle game that mixes what I call document mystery and ancestry research.",
+    preview: "My current obsession, I'm creating a puzzle game that mixes what I call document mystery and ancestry research.",
     text: [
-      "My current obsession, I’m creating a puzzle game that mixes what I call document mystery and ancestry research. Mackenzie, the main character, finds out that her family is plagued by a curse that causes untimely deaths. Fearful that she might be next, she holes up at her local library to dig through records, including census data and death certificates.",
+      "My current obsession, I'm creating a puzzle game that mixes what I call document mystery and ancestry research. Mackenzie, the main character, finds out that her family is plagued by a curse that causes untimely deaths. Fearful that she might be next, she holes up at her local library to dig through records, including census data and death certificates.",
       "The game is entirely Angular / web based, although the final version will likely be an Electron app. I originally started out developing the game in Unity, but I found it easier to develop the interface that I really wanted in HTML. You can take a look at the Unity code <a href='https://github.com/PickySalamander/ancestor-old' target='_blank'>here</a>."
     ],
     code: "Angular TypeScript HTML CSS",
