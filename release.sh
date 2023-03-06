@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
-# This is a script that will handle automated releases after running node npm buildTest or npm run
-# build. It will take the built JS and HTML and upload it to S3 and then create an invalidation
+# This is a script that will handle automated releases after running "ng build"
 
 bucket="jf-portfolio-web"
 distID="E1E52SK17Y9LID"
