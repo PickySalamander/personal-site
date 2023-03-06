@@ -1,11 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {RouterLink} from "@angular/router";
 
+/**
+ * The header bar on the website. It mostly manages the menu options that the user can use to get to other parts of
+ * the site. Also, it will collapse into a hamburger drop-down when viewed on a smaller screen.
+ */
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  /** Storage of each menu option in the header */
   options:MenuOption[] = [
     {
       text: "About",
@@ -21,23 +27,23 @@ export class HeaderComponent implements OnInit {
     },
     {
       text: "Contact",
-      href: "mailto:thepotter782@gmail.com"
+      routerLink: "contact"
     },
     {
       text: "Resume",
       href: "/assets/resume.pdf"
     }
-  ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ];
 }
 
+/** Internal storage of each menu option in the header */
 interface MenuOption {
+  /** Text to show in the option */
   text:string;
+
+  /** A raw href url to navigate to, usually used for external sites */
   href?:string;
+
+  /** A {@link RouterLink} to fill in on the link, if specified {@link href} will be ignored.*/
   routerLink?:string;
 }

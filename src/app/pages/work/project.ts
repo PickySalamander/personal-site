@@ -1,13 +1,33 @@
+/** Storage of a project that I've worked on for display */
+import {RouterLink} from "@angular/router";
+
 export interface Project {
+  /** The title of the project */
   title:string;
+
+  /** The {@link RouterLink} for the child page to display when clicking on this project */
   link:string;
+
+  /** A short piece of preview text to show in the list of projects, usually the first sentence */
   preview:string;
+
+  /** The lines of text to display on the page for the project's description */
   text:string[];
+
+  /** A list of important code competencies that went into making the project */
   code:string;
+
+  /**
+   * Whether a picture or embedded video is shown to the user, if <code>undefined</code> the system will default to
+   * "picture"
+   */
   imageType?:"embed" | "picture"
+
+  /** The url of the picture, or embed to load */
   image:string;
 }
 
+/** All the projects to display in the Project overview and description pages */
 export const WorkProjects:Project[] = [
   {
     title: "Untitled Mystery Game",
@@ -27,7 +47,7 @@ export const WorkProjects:Project[] = [
     preview: "Before my current game, I worked on a software platform called UPtick for 9 years.",
     text: [
       "Before my current game, I worked on a software platform called UPtick for 9 years. UPtick, now called Sales Performance Predictor, is a sales training / performance analysis platform using simulations and games. It has two faces: one for everyday sales people and the other for their managers to gauge how their learning is progressing.",
-      "The platform is similar to an <a href='https://en.wikipedia.org/wiki/Learning_management_system' target='_blank'>LMS</a>, allowing users to go through courses and play through simulations of real sales environments where they learn different competencies. Managers can then look at analytical platforms to see how their employees perform. Originally, the platform was exclusively web-based, but over the years we added iOS, Android, and even VR applications to the stack.",
+      "The platform is similar to an <a href='https://en.wikipedia.org/wiki/Learning_management_system' target='_blank'>LMS</a>, allowing users to go through courses and play simulations of sales environments. In mock conversations users would proceed through a branching dialogue, trying to make a sale to a virtual customer. Along the way they would work with a virtual coach to review where they had room for improvement and learn new skills. Managers could then look at analytical platforms to see how their employees performed and provide them additional training if needed. Originally, the platform was exclusively web-based, but over the years we added iOS, Android, and even VR applications to the stack.",
       "I worked on every part of the application from the Java servers to the Unity and Angular front-end. I spent the first year of the company building the entirety of the platform by myself from the ground up. After the initial product, I led a team developing and adding new features to UPtick. We even dabbled a bit into machine learning and prediction!"
     ],
     code: "AWS Java Spring Unity C# MySQL Angular TypeScript WebGL Android iOS Oculus",
@@ -49,7 +69,7 @@ export const WorkProjects:Project[] = [
     link: "pass-it-on",
     preview: "A branded Unity game that showed consumers the benefits of buying life insurance when life events came up.",
     text: [
-      "A branded Unity game that showed consumers the benefits of buying life insurance when life events came up. Made for Axa, it was vaguely reminiscent of the game of Life. Users would move through a virtual board where life events would pop up and if they had life insurance they could protect themselves from losing money.\n",
+      "A branded Unity game that showed consumers the benefits of buying life insurance when life events came up. Made for Axa, it was vaguely reminiscent of the game of Life. Users would move through a virtual board where life events would pop up and if they had life insurance they could protect themselves from losing money.",
       "The game was built entirely in Unity. This was my first game built in Unity and was my primary way of learning the game engine. I had only a few months to learn Unity and build a full game for the web as well as iOS and Android apps."
     ],
     code: "Unity C# iOS",

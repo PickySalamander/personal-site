@@ -14,6 +14,7 @@ import {WorkComponent} from './pages/work/work.component';
 import {WorkDescComponent} from './pages/work/work-desc/work-desc.component';
 import {StartupComponent} from './startup/startup.component';
 import {CdkMenuModule} from "@angular/cdk/menu";
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {CdkMenuModule} from "@angular/cdk/menu";
     ExpDescriptionComponent,
     WorkComponent,
     WorkDescComponent,
-    StartupComponent
+    StartupComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
