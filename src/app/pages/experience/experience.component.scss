@@ -8,56 +8,63 @@
 .exp-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 3rem;
+  height: 100%;
+  overflow: hidden;
 }
 
 .timeline {
-  border-left: 2px solid $color-saffron;
-  padding-left: 1rem;
-
-  & > * {
+  a {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: row;
     white-space: nowrap;
     color: $color-saffron;
-
-    &:not(:last-child) {
-      margin-bottom: 0.75rem;
-    }
+    align-items: stretch;
 
     & > * {
+      display: block;
       transition: all 500ms;
+      padding: 0.25rem 0;
     }
 
     .year {
-      position: absolute;
-      left: calc(-2rem - 2px);
-      transform: translateX(-100%);
       opacity: 25%;
+      width: 64px;
+      text-align: right;
+      padding-right: 1rem;
     }
 
-    .dot {
-      position: absolute;
-      background-color: $color-burnt-sienna;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      left: calc(-1rem - 5px);
-      top: calc(50% - 3px);
+    .text {
+      position: relative;
+      padding-left: 1rem;
+      border-left: 2px solid $color-saffron;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: $color-burnt-sienna;
+        left: -1px;
+        top: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     &:hover {
-      .dot {
-        background-color: $color-sandy-brown;
-      }
-
       .year {
         opacity: 75%;
       }
 
       .text {
         color: $color-sandy-brown;
+
+        &:after {
+          background-color: $color-sandy-brown;
+        }
       }
     }
 
@@ -72,7 +79,16 @@
 
       .text {
         color: $color-burnt-sienna;
+
+        &:after {
+            background-color: $color-sandy-brown;
+        }
       }
     }
   }
+}
+
+.outlet {
+  max-height: 100%;
+  overflow: auto;
 }

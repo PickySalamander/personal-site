@@ -1,13 +1,37 @@
 <a class="icon" routerLink="/"></a>
 
-<div class="menu">
-  <a app-menu-option routerLink="about" routerLinkActive="selected">About</a>
+<div class="wide-menu">
+  <div class="option" *ngFor="let option of options">
+    <a *ngIf="option.routerLink" [routerLink]="option.routerLink" routerLinkActive="selected">{{option.text}}</a>
 
-  <a app-menu-option routerLink="experience" routerLinkActive="selected">Experience</a>
-
-  <a app-menu-option routerLink="projects" routerLinkActive="selected">Projects</a>
-
-  <a app-menu-option target="_blank" href="mailto:thepotter782@gmail.com">Contact</a>
-
-  <a app-menu-option target="_blank" href="assets/resume.pdf">Resume</a>
+    <a *ngIf="!option.routerLink" target="_blank" [href]="option.href">{{option.text}}</a>
+  </div>
 </div>
+
+<div class="small-menu">
+  <button [cdkMenuTriggerFor]="menu">
+    <span class="mat-icon">menu</span>
+  </button>
+
+  <ng-template #menu>
+    <div class="drop" cdkMenu>
+      <div class="option" *ngFor="let option of options" cdkMenuItem>
+        <a *ngIf="option.routerLink" [routerLink]="option.routerLink" routerLinkActive="selected">{{option.text}}</a>
+
+        <a *ngIf="!option.routerLink" target="_blank" [href]="option.href">{{option.text}}</a>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<!--<ng-template #options>-->
+<!--  <a app-menu-option routerLink="about" routerLinkActive="selected">About</a>-->
+
+<!--  <a app-menu-option routerLink="experience" routerLinkActive="selected">Experience</a>-->
+
+<!--  <a app-menu-option routerLink="projects" routerLinkActive="selected">Projects</a>-->
+
+<!--  <a app-menu-option target="_blank" href="mailto:thepotter782@gmail.com">Contact</a>-->
+
+<!--  <a app-menu-option target="_blank" href="assets/resume.pdf">Resume</a>-->
+<!--</ng-template>-->

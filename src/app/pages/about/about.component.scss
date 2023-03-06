@@ -23,29 +23,15 @@
       z-index: 1;
     }
 
-    .outline, .transparency {
+    .outline {
       position: absolute;
       width: 100%;
       height: 100%;
       border-radius: 8px;
-    }
-
-    .outline {
       border: 2px solid $color-saffron;
-      border-radius: 8px;
       top: 16px;
       left: 16px;
       z-index: 0;
-      transition: all 500ms;
-    }
-
-    .transparency {
-      background-color: darken($color-saffron, 20%);
-      opacity: 50%;
-      border-radius: 8px;
-      top: 0;
-      left: 0;
-      z-index: 2;
       transition: all 500ms;
     }
 

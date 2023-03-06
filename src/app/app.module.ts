@@ -7,13 +7,13 @@ import {RouterModule} from "@angular/router";
 import {HeaderComponent} from './header/header.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {HomeComponent} from './pages/home/home.component';
-import {MenuOptionComponent} from "./header/menu-option/menu-option.component";
 import {AboutComponent} from './pages/about/about.component';
-import { ExperienceComponent } from './pages/experience/experience.component';
-import { ExpDescriptionComponent } from './pages/experience/exp-description/exp-description.component';
-import { WorkComponent } from './pages/work/work.component';
-import { WorkDescComponent } from './pages/work/work-desc/work-desc.component';
-import { StartupComponent } from './startup/startup.component';
+import {ExperienceComponent} from './pages/experience/experience.component';
+import {ExpDescriptionComponent} from './pages/experience/exp-description/exp-description.component';
+import {WorkComponent} from './pages/work/work.component';
+import {WorkDescComponent} from './pages/work/work-desc/work-desc.component';
+import {StartupComponent} from './startup/startup.component';
+import {CdkMenuModule} from "@angular/cdk/menu";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,6 @@ import { StartupComponent } from './startup/startup.component';
     HeaderComponent,
     SidebarComponent,
     HomeComponent,
-    MenuOptionComponent,
     AboutComponent,
     ExperienceComponent,
     ExpDescriptionComponent,
@@ -31,9 +30,9 @@ import { StartupComponent } from './startup/startup.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    CdkMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
