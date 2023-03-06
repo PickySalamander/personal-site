@@ -39,7 +39,7 @@ export const WorkProjects:Project[] = [
     ],
     code: "Angular TypeScript HTML CSS",
     imageType: "embed",
-    image: "https://www.youtube.com/embed/qeWr-NIqNy4"
+    image: "https://www.youtube.com/embed/qeWr-NIqNy4?rel=0"
   },
   {
     title: "UPtick",
