@@ -42,6 +42,18 @@ export const WorkProjects:Project[] = [
     image: "https://www.youtube.com/embed/qeWr-NIqNy4?rel=0"
   },
   {
+    title: "Website Alerter",
+    link: "website-alerter",
+    preview: "An Amazon CDK project that sets up a variety of Lambda functions that will scrape a series of websites to see if there are changes.",
+    text: [
+      "There are a few websites out there that I was interested in watching for updates. Originally, I looked for the usual ways of watching them for changes (social media, RSS, Google Alerts, etc.), but none of them really fit. I also looked into a variety of online tools that already existed and there didn't seem to be any that fulfilled my requirements: pinging the websites on a weekly basis, giving me a list of changes, and most importantly affordable. So I decided to make my own!",
+      "Since one of my requirements was affordability, I decided to make the entire project serverless on the Amazon CDK framework. I've used infrastructure as code frameworks before, and I'm very familiar with CloudFormation. I had never used the CDK before though, so I decided to challenge myself to learn it.",
+      "The full source code is <a href='https://github.com/PickySalamander/website-alerter' target='_blank'>here</a>."
+    ],
+    code: "AWS CDK TypeScript Docker Node.js",
+    image: "/assets/website-alerter.png"
+  },
+  {
     title: "UPtick",
     link: "uptick",
     preview: "Before my current game, I worked on a software platform called UPtick for 9 years.",
