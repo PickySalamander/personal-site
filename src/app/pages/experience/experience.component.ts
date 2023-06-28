@@ -23,6 +23,11 @@ export class ExperienceComponent {
       link: "self"
     },
     {
+      yearStart: 2013,
+      name: "Sciolytix",
+      link: "sciolytix"
+    },
+    {
       yearStart: 2020,
       name: "SURJ NYC",
       link: "surj"
@@ -31,11 +36,6 @@ export class ExperienceComponent {
       yearStart: 2018,
       name: "Tech for Campaigns",
       link: "tfc"
-    },
-    {
-      yearStart: 2013,
-      name: "Sciolytix",
-      link: "sciolytix"
     },
     {
       yearStart: 2011,
