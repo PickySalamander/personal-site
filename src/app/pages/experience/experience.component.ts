@@ -28,16 +28,6 @@ export class ExperienceComponent {
       link: "sciolytix"
     },
     {
-      yearStart: 2020,
-      name: "SURJ NYC",
-      link: "surj"
-    },
-    {
-      yearStart: 2018,
-      name: "Tech for Campaigns",
-      link: "tfc"
-    },
-    {
       yearStart: 2011,
       name: "Kuma Reality Games",
       link: "kuma"

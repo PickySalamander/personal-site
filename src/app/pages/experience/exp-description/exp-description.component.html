@@ -1,69 +1,87 @@
 <ng-container [ngSwitch]="job">
   <div *ngSwitchDefault>
     <h3>Self Employed - New York, NY</h3>
-    <sub>Game Developer | 2022 - Present</sub>
+    <sub>Game Developer | Feb 2022 - Present</sub>
+
+    <p>Working as sole developer, artist, and designer, building a game from the ground up. Utilized a full-stack
+      development approach to create interactive web applications for clients across various industries. Collaborated
+      closely with clients to understand project requirements, develop scalable architectures, and deliver polished user
+      interfaces.</p>
 
     <ul>
       <li>Working as sole developer, artist, and designer, building the game from the ground up.</li>
-      <li>Developing Angular based puzzle game that mixes document mystery with ancestry research. The main character
-        uncovers the root cause of a family curse. Give it a try
-        <a href="https://ancestor.joe-flaherty.me/" target="_blank">here</a> or see the original Unity code
-        <a href="https://github.com/PickySalamander/ancestor-old" target="_blank">here</a>.
+      <li>DDeveloping Angular based puzzle game that mixes document mystery with ancestry research. The main character
+        uncovers the root cause of a family curse. Give it a try <a href="https://ancestor.joe-flaherty.me/"
+                                                                    target="_blank">here</a> or see the original Unity
+        code <a href="https://github.com/PickySalamander/ancestor-old" target="_blank">here</a>.
       </li>
     </ul>
   </div>
 
   <div *ngSwitchCase="'sciolytix'">
     <h3>Sciolytix (formerly Selleration) - New York, NY</h3>
-    <sub>Lead Product Architect | 2013 - 2022</sub>
+    <sub>Lead Product Architect | Apr 2013 - Feb 2022</sub>
+
+    <p>A leading provider of innovative learning and development solutions for organizations across various industries.
+      Their advanced learning platform leverages artificial intelligence and data analytics to deliver personalized
+      training programs that enhance workforce performance and drive business growth. The Lead Architect developed
+      products to improve employee productivity, engagement and overall organizational success.</p>
 
     <ul>
-      <li>Starting as a single-person development team, built the flagship product UPtick from the ground up. UPtick is a simulation training platform built in Java, Unity, Spring, Oculus, iOS, Android and Angular.</li>
-      <li>Maintained a complex AWS stack as system administrator for thousands of users, using services: EC2, S3, CloudFormation, RDS, DynamoDB, Lambda, CloudWatch, and more.</li>
-      <li>Collaborated with the leadership team to build goals for the development team.</li>
-      <li>Developed machine learning pipeline used to predict success of users using AWS SageMaker.</li>
+      <li>Spearheaded the migration of a legacy game system to a cloud-based infrastructure, leveraging Unity game
+        engine to build a multi-platform training game to have equal functionality on iOS, Android, WebGL, download and
+        Oculus.
+      </li>
+      <li>Modernized analytical system by standing up an ETL and Machine Learning Platform utilizing AWS SageMaker.</li>
+      <li>Improved scalability, reduced infrastructure costs and enhanced system stability and availability using
+        auto-scaling, load balancing, and fault-tolerant architecture.
+      </li>
+      <li>Led DevOps showcasing an uptime of 99% over 9 years and thousands of users.</li>
+      <li>Stood up CI/CD platform utilizing Git, Jenkins and CodeDeploy. Identified and resolved technical issues,
+        resulting in improved rollout and rollback for future versions and eliminating downtime for new version
+        implementations.
+      </li>
     </ul>
   </div>
 
   <div *ngSwitchCase="'kuma'">
     <h3>Kuma Reality Games - New York, NY</h3>
-    <sub>Developer | 2011 - 2013</sub>
+    <sub>Developer | Jun 2011 - Apr 2013</sub>
+
+    <p>A prominent game development company known for creating immersive TV games. Their innovative use of technology
+      and attention to detail has garnered praise and a dedicated fan base within the gaming industry.</p>
+
     <ul>
-      <li>Developed a social media platform called ScatterRadio which allowed users to record and stream audio messages. Worked primarily in Java, PHP, AS3, MySQL, JavaScript, jQuery, HTML, iOS, and Android.</li>
+      <li>Conducted research on emerging technologies and trends in the industry, providing valuable insights for
+        proof-of-concept streaming audio platform to a fully featured web, iOS, and Android application.
+      </li>
+      <li>Collaborated with senior developers to optimize performance and enhance user experience by transitioning from
+        Flash to HTML.
+      </li>
+      <li>Assisted in the development of prototypes, contributing to the design and implementation of new features in
+        English, French, Spanish, Arabic, and Farsi.
+      </li>
     </ul>
   </div>
 
   <div *ngSwitchCase="'brandgames'">
     <h3>BrandGames - New York, NY</h3>
-    <sub>Lead Developer | 2009 - 2011</sub>
+    <sub>Lead Developer | Oct 2009 - Jun 2011</sub>
+
+    <p>A leading company specializing in the development of custom branded games and interactive experiences. With a focus on gamification, they create engaging and immersive digital solutions. Their expertise lies in designing and implementing interactive experiences that align with a marketing objective, enhancing customer engagement and brand recognition.</p>
+
     <ul>
       <li>Developed marketing and training games for a variety of Fortune 500 companies, working primarily in Flash, HTML, Unity, SCORM, and ASP.net.</li>
+      <li>Setup a new CI/CD system using Jenkins to keep all active games current.</li>
     </ul>
   </div>
 
   <div *ngSwitchCase="'rebelmonkey'">
     <h3>Rebel Monkey - New York, NY</h3>
-    <sub>Game Developer | 2008 - 2009</sub>
+    <sub>Game Developer | Oct 2008 - Jul 2009</sub>
     <ul>
-      <li>Developed Java servers for a variety of multiplayer Flash games hosted on early Amazon EC2.</li>
+      <li>Developed game prototypes, contributing to the design and implementation of gameplay features of Java server infrastructure launching the original cooperative based multiplayer games on EC2.</li>
     </ul>
   </div>
 
-  <div *ngSwitchCase="'tfc'">
-    <h3>Tech for Campaigns</h3>
-    <sub>Frontend Developer | 2018 - Present</sub>
-    <ul>
-      <li>Working on an all-volunteer team, setting up WordPress sites for grassroots political campaigns.</li>
-      <li>Train new volunteer frontend developers.</li>
-    </ul>
-  </div>
-
-  <div *ngSwitchCase="'surj'">
-    <h3>Showing Up for Racial Justice, NYC Chapter</h3>
-    <sub>Communications Volunteer | 2020 - Present</sub>
-    <ul>
-      <li>Help manage communications to more than 23,000 members through the EveryAction CRM.</li>
-      <li>Train new volunteers on how to use EveryAction and communicate with membership.</li>
-    </ul>
-  </div>
 </ng-container>
