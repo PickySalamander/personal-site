@@ -28,10 +28,6 @@ export class HeaderComponent {
     {
       text: "Contact",
       routerLink: "contact"
-    },
-    {
-      text: "Resume",
-      href: "/assets/resume.pdf"
     }
   ];
 }
