@@ -2,16 +2,18 @@
   <h1>Projects</h1>
 
   <div class="projects">
-    <a class="project" *ngFor="let project of projects" [routerLink]="project.link">
+    @for (project of projects; track project) {
+      <a class="project" [routerLink]="project.link">
       <span class="top">
-        <h3>{{project.title}}</h3>
+        <h3>{{ project.title }}</h3>
 
         <span class="mat-icon">open_in_new</span>
       </span>
 
-      <p>{{project.preview}}</p>
+        <p>{{ project.preview }}</p>
 
-      <p><code>{{project.code}}</code></p>
-    </a>
+        <p><code>{{ project.code }}</code></p>
+      </a>
+    }
   </div>
 </div>
