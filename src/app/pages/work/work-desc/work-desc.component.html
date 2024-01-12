@@ -5,9 +5,9 @@
     <div class="box">
       @for (text of project.text; track text) {
         <p [innerHTML]="text"></p>
-
-        <code>{{ project.code }}</code>
       }
+
+      <code>{{ project.code }}</code>
     </div>
 
     <p>
