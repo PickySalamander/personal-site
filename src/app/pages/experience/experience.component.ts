@@ -10,9 +10,10 @@ import {RouterLink} from "@angular/router";
  * @see ExpDescriptionComponent
  */
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.scss'],
+    standalone: false
 })
 export class ExperienceComponent {
   /** List of items to put on the experience page, the text for each is in the {@link ExpDescriptionComponent} */

@@ -7,9 +7,10 @@ import {DomSanitizer} from "@angular/platform-browser";
  * Show a description of a project that was selected from {@link WorkProjects} by the user.
  */
 @Component({
-  selector: 'app-work-desc',
-  templateUrl: './work-desc.component.html',
-  styleUrls: ['./work-desc.component.scss']
+    selector: 'app-work-desc',
+    templateUrl: './work-desc.component.html',
+    styleUrls: ['./work-desc.component.scss'],
+    standalone: false
 })
 export class WorkDescComponent implements OnInit {
   /** The project that was selected to be displayed on the page */

@@ -6,9 +6,10 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
  * clean up as the rest of the site is faded in.
  */
 @Component({
-  selector: 'app-startup',
-  templateUrl: './startup.component.html',
-  styleUrls: ['./startup.component.scss']
+    selector: 'app-startup',
+    templateUrl: './startup.component.html',
+    styleUrls: ['./startup.component.scss'],
+    standalone: false
 })
 export class StartupComponent implements OnInit {
   /** Notify the main page that the animation has completed and that it is time to fade in the rest of the site */

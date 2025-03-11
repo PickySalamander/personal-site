@@ -9,9 +9,10 @@ import {WorkDescComponent} from "./work-desc/work-desc.component";
  * @see WorkDescComponent
  */
 @Component({
-  selector: 'app-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+    selector: 'app-work',
+    templateUrl: './work.component.html',
+    styleUrls: ['./work.component.scss'],
+    standalone: false
 })
 export class WorkComponent {
   /** All the projects to display on the page */

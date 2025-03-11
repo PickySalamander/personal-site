@@ -6,9 +6,10 @@ import {RouterLink} from "@angular/router";
  * the site. Also, it will collapse into a hamburger drop-down when viewed on a smaller screen.
  */
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: false
 })
 export class HeaderComponent {
   /** Storage of each menu option in the header */

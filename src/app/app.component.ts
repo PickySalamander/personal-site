@@ -6,9 +6,10 @@ import {NavigationEnd, Router} from "@angular/router";
  * Main root of the website. This mostly just hosts html, but will also control the intro animation.
  */
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   /** State of the intro animation, will be skipped if {@link environment.skipIntro} is true */
