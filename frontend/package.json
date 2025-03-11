@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-frontend",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -34,10 +34,5 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.4"
-  },
-  "overrides": {
-    "localtunnel": {
-      "axios": "1.6.2"
-    }
   }
 }
