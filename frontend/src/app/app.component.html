@@ -18,4 +18,6 @@
   </div>
 }
 
-<app-startup (onAnimationComplete)="onIntroComplete()" *ngIf="started != 'done'"></app-startup>
+@if (started != 'done') {
+  <app-startup (onAnimationComplete)="onIntroComplete()"></app-startup>
+}

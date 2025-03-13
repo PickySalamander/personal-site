@@ -10,7 +10,8 @@
   top: 0;
 }
 
-$size: calc(#{globals.$header-height} - 2 * #{globals.$header-padding});
+//calculate the exact size of the logo, taking into account header height, padding, and border size
+$size: calc(#{globals.$header-height} - (2 * #{globals.$header-padding}) - 2px);
 
 @keyframes fade-in {
   from {
@@ -38,6 +39,7 @@ $size: calc(#{globals.$header-height} - 2 * #{globals.$header-padding});
 .icon {
   position: absolute;
   background-image: url("/assets/personal-logo.svg");
+  background-size: 100% 100%;
   height: $size;
   width: $size;
   top: calc(50% - #{$size} / 2);

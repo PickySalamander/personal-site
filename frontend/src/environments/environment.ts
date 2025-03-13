@@ -3,5 +3,5 @@ export const environment = {
   production: true,
 
   /** Should the intro animation be skipped? */
-  skipIntro: true
+  skipIntro: false
 };

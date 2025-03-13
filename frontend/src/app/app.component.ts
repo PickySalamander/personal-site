@@ -21,7 +21,7 @@ import {StartupComponent} from "./startup/startup.component";
 })
 export class AppComponent {
   /** State of the intro animation, will be skipped if {@link environment.skipIntro} is true */
-  started:"intro" | "fade" | "done" = environment.skipIntro ? "done" : "intro";
+  started:IntroState = environment.skipIntro ? "done" : "intro";
 
   @ViewChild("outlet") outlet:ElementRef;
 
@@ -48,3 +48,5 @@ export class AppComponent {
     setTimeout(() => this.started = "done", 500);
   }
 }
+
+type IntroState = "intro" | "fade" | "done";

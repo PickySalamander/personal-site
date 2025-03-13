@@ -84,7 +84,7 @@ export const WorkProjects:Project[] = [
       "I built this site from scratch using Angular / Typescript and hosted it on a variety of AWS services. It is hosted from S3, through CloudFront, and using Route53 nameservers. You can take a look at the code <a href='https://github.com/PickySalamander/personal-site' target='_blank'>here</a>!"
     ],
     code: "Angular Typescript AWS DNS",
-    image: "/assets/this-site.png"
+    image: "/assets/personal-logo.svg"
   },
   {
     title: "ScatterRadio",

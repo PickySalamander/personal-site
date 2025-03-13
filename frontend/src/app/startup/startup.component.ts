@@ -38,7 +38,7 @@ export class StartupComponent implements OnInit {
    */
   onAnimation($event:AnimationEvent) {
     //if this is the correct animation then notify
-    if($event.animationName == this.finalEventName) {
+    if($event.animationName.endsWith(this.finalEventName)) {
       this.dispatchEvent();
     }
   }
