@@ -1,5 +1,4 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
+import {Routes} from '@angular/router';
 import {HomeComponent} from "./pages/home/home.component";
 import {AboutComponent} from "./pages/about/about.component";
 import {ExperienceComponent} from "./pages/experience/experience.component";
@@ -8,7 +7,7 @@ import {WorkComponent} from "./pages/work/work.component";
 import {WorkDescComponent} from "./pages/work/work-desc/work-desc.component";
 import {ContactComponent} from "./pages/contact/contact.component";
 
-const routes:Routes = [
+export const routes:Routes = [
   {
     path: '',
     title: "Joe - Home",
@@ -54,10 +53,3 @@ const routes:Routes = [
     redirectTo: "/"
   }
 ];
-
-@NgModule({
-  exports: [RouterModule],
-  imports: [RouterModule.forRoot(routes)],
-})
-export class AppRoutingModule {
-}

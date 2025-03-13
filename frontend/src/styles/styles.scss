@@ -1,5 +1,4 @@
-@import "globals";
-@import '@angular/cdk/overlay-prebuilt.css';
+@use "styles/globals";
 
 html, body {
   height: 100%;
@@ -8,7 +7,7 @@ html, body {
 body {
   margin: 0;
   font-family: "Roboto Slab", serif;
-  color: $color-saffron;
+  color: globals.$color-saffron;
   font-size: 20px;
 }
 
@@ -16,11 +15,11 @@ a {
   cursor: pointer;
   outline: none;
   text-decoration: none;
-  color: $color-sandy-brown;
+  color: globals.$color-sandy-brown;
   transition: all 500ms;
 
   &:hover {
-    color: $color-burnt-sienna;
+    color: globals.$color-burnt-sienna;
   }
 }
 
@@ -28,20 +27,20 @@ a {
   display: inline-flex;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  color: $color-sandy-brown;
-  border: 1px solid $color-sandy-brown;
+  color: globals.$color-sandy-brown;
+  border: 1px solid globals.$color-sandy-brown;
   justify-content: center;
   align-items: center;
   gap: 0.25em;
 
   &:hover {
-    background-color: rgba($color-sandy-brown, 0.25);
-    color: $color-sandy-brown;
+    background-color: rgba(globals.$color-sandy-brown, 0.25);
+    color: globals.$color-sandy-brown;
   }
 }
 
 h1, h2, h3 {
-  color: $color-burnt-sienna;
+  color: globals.$color-burnt-sienna;
 }
 
 h1 {
@@ -66,7 +65,7 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-persian-green;
+  background-color: globals.$color-persian-green;
   border-radius: 10px;
 }
 

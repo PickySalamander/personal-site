@@ -1,4 +1,4 @@
-@import "src/styles/globals";
+@use "styles/globals";
 
 :host {
   max-width: 1024px;
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: row;
     white-space: nowrap;
-    color: $color-saffron;
+    color: globals.$color-saffron;
     align-items: stretch;
 
     & > * {
@@ -43,14 +43,14 @@
     .text {
       position: relative;
       padding-left: 1rem;
-      border-left: 2px solid $color-saffron;
+      border-left: 2px solid globals.$color-saffron;
 
       &:after {
         position: absolute;
         content: "";
         width: 8px;
         height: 8px;
-        background-color: $color-burnt-sienna;
+        background-color: globals.$color-burnt-sienna;
         left: -1px;
         top: 50%;
         border-radius: 50%;
@@ -64,17 +64,17 @@
       }
 
       .text {
-        color: $color-sandy-brown;
+        color: globals.$color-sandy-brown;
 
         &:after {
-          background-color: $color-sandy-brown;
+          background-color: globals.$color-sandy-brown;
         }
       }
     }
 
     &:active, &.selected {
       .dot {
-        background-color: $color-sandy-brown;
+        background-color: globals.$color-sandy-brown;
       }
 
       .year {
@@ -82,10 +82,10 @@
       }
 
       .text {
-        color: $color-burnt-sienna;
+        color: globals.$color-burnt-sienna;
 
         &:after {
-            background-color: $color-sandy-brown;
+            background-color: globals.$color-sandy-brown;
         }
       }
     }

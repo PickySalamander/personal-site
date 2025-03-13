@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Project, WorkProjects} from "../project";
 import {DomSanitizer} from "@angular/platform-browser";
 
@@ -7,10 +7,12 @@ import {DomSanitizer} from "@angular/platform-browser";
  * Show a description of a project that was selected from {@link WorkProjects} by the user.
  */
 @Component({
-    selector: 'app-work-desc',
-    templateUrl: './work-desc.component.html',
-    styleUrls: ['./work-desc.component.scss'],
-    standalone: false
+  selector: 'app-work-desc',
+  templateUrl: './work-desc.component.html',
+  imports: [
+    RouterLink
+  ],
+  styleUrls: ['./work-desc.component.scss']
 })
 export class WorkDescComponent implements OnInit {
   /** The project that was selected to be displayed on the page */

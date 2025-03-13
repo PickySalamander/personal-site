@@ -3,13 +3,15 @@
     <h1>Experience</h1>
 
     <div class="timeline">
-      <a *ngFor="let item of list" [routerLink]="item.link" routerLinkActive="selected">
-        <span class="year">
-          {{item.yearStart}}
-        </span>
+      @for (item of list; track item.link) {
+        <a [routerLink]="item.link" routerLinkActive="selected">
+          <span class="year">
+            {{ item.yearStart }}
+          </span>
 
-        <span class="text">{{item.name}}</span>
-      </a>
+          <span class="text">{{ item.name }}</span>
+        </a>
+      }
     </div>
   </div>
 

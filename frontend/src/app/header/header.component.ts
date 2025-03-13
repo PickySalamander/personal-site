@@ -1,15 +1,20 @@
 import {Component} from '@angular/core';
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive} from "@angular/router";
+import {CdkMenuModule, CdkMenuTrigger} from "@angular/cdk/menu";
 
 /**
  * The header bar on the website. It mostly manages the menu options that the user can use to get to other parts of
  * the site. Also, it will collapse into a hamburger drop-down when viewed on a smaller screen.
  */
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.scss'],
-    standalone: false
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    CdkMenuModule
+  ],
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   /** Storage of each menu option in the header */

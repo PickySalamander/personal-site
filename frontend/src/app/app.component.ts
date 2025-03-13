@@ -1,15 +1,23 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {environment} from "../environments/environment";
-import {NavigationEnd, Router} from "@angular/router";
+import {NavigationEnd, Router, RouterOutlet} from "@angular/router";
+import {HeaderComponent} from "./header/header.component";
+import {SidebarComponent} from "./sidebar/sidebar.component";
+import {StartupComponent} from "./startup/startup.component";
 
 /**
  * Main root of the website. This mostly just hosts html, but will also control the intro animation.
  */
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  imports: [
+    HeaderComponent,
+    SidebarComponent,
+    RouterOutlet,
+    StartupComponent
+  ],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   /** State of the intro animation, will be skipped if {@link environment.skipIntro} is true */

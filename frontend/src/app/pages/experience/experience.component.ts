@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ExpDescriptionComponent} from "./exp-description/exp-description.component";
-import {RouterLink} from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 /**
  * This controls the experience page that shows all the jobs I've had over the years. It's pretty much a direct copy
@@ -10,10 +10,14 @@ import {RouterLink} from "@angular/router";
  * @see ExpDescriptionComponent
  */
 @Component({
-    selector: 'app-experience',
-    templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.scss'],
-    standalone: false
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet
+  ],
+  styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
   /** List of items to put on the experience page, the text for each is in the {@link ExpDescriptionComponent} */

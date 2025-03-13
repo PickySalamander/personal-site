@@ -1,20 +1,20 @@
-@import "src/styles/globals";
+@use "styles/globals";
 
 :host {
   display: flex;
-  width: $header-height;
+  width: globals.$header-height;
   height: 100%;
-  padding: #{2 * $header-padding} $header-padding;
-  border-right: 2px solid $color-saffron;
+  padding: #{2 * globals.$header-padding} globals.$header-padding;
+  border-right: 2px solid globals.$color-saffron;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
 
   @media (max-width: 900px) {
     width: 100%;
-    height: $header-height;
+    height: globals.$header-height;
     border-right: none;
-    border-top: 2px solid $color-saffron;
+    border-top: 2px solid globals.$color-saffron;
   }
 }
 
@@ -39,12 +39,12 @@
     }
 
     path {
-      fill: $color-saffron;
+      fill: globals.$color-saffron;
       transition: fill 500ms;
     }
 
     &:hover path {
-      fill: $color-burnt-sienna;
+      fill: globals.$color-burnt-sienna;
     }
   }
 }

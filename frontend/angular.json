@@ -31,13 +31,15 @@
               "src/robots.txt"
             ],
             "styles": [
+              "@angular/cdk/overlay-prebuilt.css",
               "src/styles/styles.scss"
             ],
             "scripts": [],
             "browser": "src/main.ts",
             "stylePreprocessorOptions": {
               "includePaths": [
-                "."
+                "node_modules/",
+                "src"
               ]
             }
           },

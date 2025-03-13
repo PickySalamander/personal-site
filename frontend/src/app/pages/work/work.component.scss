@@ -1,4 +1,5 @@
-@import "src/styles/globals";
+@use "sass:color";
+@use "styles/globals";
 
 :host {
   max-width: 1200px;
@@ -12,16 +13,16 @@
 
   .project {
     position: relative;
-    background-color: lighten($color-charcoal, 10%);
+    background-color: color.adjust(globals.$color-charcoal, $lightness:10%);
     border-radius: 8px;
     padding: 0 1em;
-    color: $color-saffron;
+    color: globals.$color-saffron;
 
     .top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: $color-burnt-sienna;
+      color: globals.$color-burnt-sienna;
 
       & > * {
         transition: color 500ms;
@@ -32,7 +33,7 @@
       transform: translateY(-10px);
 
       .top, h1, h2, h3 {
-        color: $color-sandy-brown;
+        color: globals.$color-sandy-brown;
       }
     }
   }

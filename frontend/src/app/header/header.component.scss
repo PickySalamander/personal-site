@@ -1,13 +1,13 @@
-@import "src/styles/globals";
+@use "styles/globals";
 
 :host {
   display: flex;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: $header-height;
-  padding: $header-padding #{2 * $header-padding};
-  border-bottom: 2px solid $color-saffron;
+  min-height: globals.$header-height;
+  padding: globals.$header-padding #{2 * globals.$header-padding};
+  border-bottom: 2px solid globals.$color-saffron;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
@@ -36,13 +36,13 @@
     align-items: center;
 
     a {
-      color: $color-saffron;
+      color: globals.$color-saffron;
       font-size: 1.25rem;
       transition: all 500ms;
       padding: 1rem;
 
       &:hover, &.selected {
-        color: $color-burnt-sienna;
+        color: globals.$color-burnt-sienna;
       }
     }
 
@@ -50,28 +50,28 @@
       position: absolute;
       content: "";
       display: block;
-      background-color: $color-burnt-sienna;
+      background-color: globals.$color-burnt-sienna;
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      bottom: calc(-#{$header-padding} - 5px);
+      bottom: calc(-#{globals.$header-padding} - 5px);
     }
   }
 }
 
 .small-menu {
   & > button {
-    border: 1px solid $color-saffron;
+    border: 1px solid globals.$color-saffron;
     border-radius: 4px;
     padding: .5rem;
     background: none;
-    color: $color-saffron;
+    color: globals.$color-saffron;
     font-size: 24px;
     transition: all 500ms;
 
     &:hover, &:active {
-      border-color: $color-burnt-sienna;
-      color: $color-burnt-sienna;
+      border-color: globals.$color-burnt-sienna;
+      color: globals.$color-burnt-sienna;
     }
   }
 }
@@ -85,8 +85,8 @@
 .drop {
   display: flex;
   flex-direction: column;
-  background-color: $color-charcoal;
-  border: 1px solid $color-saffron;
+  background-color: globals.$color-charcoal;
+  border: 1px solid globals.$color-saffron;
   border-radius: 4px;
   margin-top: 1rem;
 
@@ -98,17 +98,17 @@
     padding: 0.5rem 1rem;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $color-saffron;
+      border-bottom: 1px solid globals.$color-saffron;
     }
   }
 
   a {
-    color: $color-saffron;
+    color: globals.$color-saffron;
     font-size: 1.25rem;
     transition: all 500ms;
 
     &:hover, &.selected {
-      color: $color-burnt-sienna;
+      color: globals.$color-burnt-sienna;
     }
   }
 }

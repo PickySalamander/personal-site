@@ -1,4 +1,4 @@
-@import "src/styles/globals";
+@use "styles/globals";
 
 :host {
   position: absolute;
@@ -10,7 +10,7 @@
   top: 0;
 }
 
-$size: calc(#{$header-height} - 2 * #{$header-padding});
+$size: calc(#{globals.$header-height} - 2 * #{globals.$header-padding});
 
 @keyframes fade-in {
   from {
@@ -24,8 +24,8 @@ $size: calc(#{$header-height} - 2 * #{$header-padding});
 
 @keyframes slide-to {
   to {
-    top: $header-padding;
-    left: $header-padding * 2;
+    top: globals.$header-padding;
+    left: globals.$header-padding * 2;
   }
 }
 

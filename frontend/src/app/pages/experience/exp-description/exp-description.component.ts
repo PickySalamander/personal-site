@@ -11,8 +11,7 @@ import {ExperienceComponent} from "../experience.component";
 @Component({
     selector: 'app-exp-description',
     templateUrl: './exp-description.component.html',
-    styleUrls: ['./exp-description.component.scss'],
-    standalone: false
+    styleUrls: ['./exp-description.component.scss']
 })
 export class ExpDescriptionComponent implements OnDestroy {
   /** The selected job that should be displayed, works with a switch statement on the page */

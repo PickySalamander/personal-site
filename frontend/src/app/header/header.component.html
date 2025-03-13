@@ -1,11 +1,15 @@
 <a class="icon" routerLink="/"></a>
 
 <div class="wide-menu">
-  <div class="option" *ngFor="let option of options">
-    <a *ngIf="option.routerLink" [routerLink]="option.routerLink" routerLinkActive="selected">{{option.text}}</a>
-
-    <a *ngIf="!option.routerLink" target="_blank" [href]="option.href">{{option.text}}</a>
-  </div>
+  @for (option of options; track option) {
+    <div class="option">
+      @if (option.routerLink) {
+        <a [routerLink]="option.routerLink" routerLinkActive="selected">{{ option.text }}</a>
+      } @else {
+        <a target="_blank" [href]="option.href">{{ option.text }}</a>
+      }
+    </div>
+  }
 </div>
 
 <div class="small-menu">
@@ -15,11 +19,15 @@
 
   <ng-template #menu>
     <div class="drop" cdkMenu>
-      <div class="option" *ngFor="let option of options" cdkMenuItem>
-        <a *ngIf="option.routerLink" [routerLink]="option.routerLink" routerLinkActive="selected">{{option.text}}</a>
-
-        <a *ngIf="!option.routerLink" target="_blank" [href]="option.href">{{option.text}}</a>
-      </div>
+      @for (option of options; track option) {
+        <div class="option" cdkMenuItem>
+          @if (option.routerLink) {
+            <a [routerLink]="option.routerLink" routerLinkActive="selected">{{ option.text }}</a>
+          } @else {
+            <a target="_blank" [href]="option.href">{{ option.text }}</a>
+          }
+        </div>
+      }
     </div>
   </ng-template>
 </div>
