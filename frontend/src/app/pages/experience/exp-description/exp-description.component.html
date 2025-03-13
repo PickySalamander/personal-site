@@ -1,21 +1,58 @@
 @switch (job) {
-  @default {
+  @case ("allai") {
     <div>
-      <h3>Self Employed - New York, NY</h3>
-      <sub>Game Developer | Feb 2022 - Present</sub>
+      <h3>AllaiHealth - New York, NY</h3>
+      <sub>Senior Software Engineer | Feb 2024 - Present</sub>
 
-      <p>Working as sole developer, artist, and designer, building a game from the ground up. Utilized a full-stack
-        development approach to create interactive web applications for clients across various industries. Collaborated
-        closely with clients to understand project requirements, develop scalable architectures, and deliver polished
-        user interfaces.</p>
+      <p>Developer of a large AI-powered patient medical history and documentation platform. It’s capable of delivering
+        both multidisciplinary patient-facing surveys and transcribing audio recordings from doctor-patient
+        conversations. Finally, AI takes surveys and transcribed conversations and converts them into notes for the
+        doctor to easily parse.</p>
 
       <ul>
-        <li>Working as sole developer, artist, and designer, building the game from the ground up.</li>
-        <li>DDeveloping Angular based puzzle game that mixes document mystery with ancestry research. The main character
-          uncovers the root cause of a family curse. Give it a try
-          <a href="https://ancestor.joe-flaherty.me/" target="_blank">here </a>
-          or see the original Unity code
-          <a href="https://github.com/PickySalamander/ancestor-old" target="_blank">here</a>.
+        <li>Built a mobile AI scribe application from scratch in 4 months. Uses GPT, Lambda, AWS transcribe, and
+          Angular, to listen to, transcribe, and organize notes from a doctor-patient conversation.
+        </li>
+        <li>Led modernization effort of legacy monolith EC2 Spring survey platform to an AWS CDK serverless stack using
+          Lambda, API Gateway, DynamoDB, and Fargate. This saved costs, reduced release times, and added redundancy.
+        </li>
+        <li>Developed a new easy-to-use visual Angular framework, reducing implementation of new client surveys from
+          weeks to hours.
+        </li>
+        <li>Implemented brand new electronic healthcare record integration in 3 months that seamlessly transfers data to
+          and from client’s Athenahealth installation.
+        </li>
+        <li>Rebuilt automated build and testing platform from scratch using Cypress, Jest, and GitHub actions, reducing
+          release time and logistics.
+        </li>
+        <li>Created an automated testing framework for the entire platform using Cypress and Jasmine, capable of
+          answering complex 100 question surveys in a matter of minutes.
+        </li>
+      </ul>
+    </div>
+  }
+  @case ("self") {
+    <div>
+      <h3>Self Employed - New York, NY</h3>
+      <sub>Full-Stack Developer | Feb 2022 - Feb 2024</sub>
+
+      <p>Created interactive web applications for clients across various industries. Collaborated closely with clients
+        to understand project requirements, develop scalable architectures, and deliver polished user interfaces.</p>
+
+      <ul>
+        <li>Orchestrated the designing and implementation of lightweight web applications (Angular, Docker, Wordpress,
+          AWS) and collaborated effectively with multidisciplinary teams.
+        </li>
+        <li>Offered rapid response to teams with server and domain issues, solving complex issues quickly and
+          effectively.
+        </li>
+        <li>Collaborated closely with clients’ development teams to identify and address build issues, leading to
+          enhanced productivity and streamlined release cycles.
+        </li>
+        <li>Developed
+          <a href="https://ancestor.joe-flaherty.me/" target="_blank">Angular based puzzle game</a>
+          that mixes document mystery with ancestry research. The main character uncovers the root cause of a family
+          curse.
         </li>
       </ul>
     </div>
@@ -25,25 +62,23 @@
       <h3>Sciolytix (formerly Selleration) - New York, NY</h3>
       <sub>Lead Product Architect | Apr 2013 - Feb 2022</sub>
 
-      <p>A leading provider of innovative learning and development solutions for organizations across various
-        industries. Their advanced learning platform leverages artificial intelligence and data analytics to deliver
-        personalized training programs that enhance workforce performance and drive business growth. The Lead Architect
-        developed products to improve employee productivity, engagement and overall organizational success.</p>
+      <p>Leading provider of innovative learning solutions for organizations across various industries. Developed
+        products to improve employee productivity, engagement, and overall organizational success.</p>
 
       <ul>
-        <li>Spearheaded the migration of a legacy game system to a cloud-based infrastructure, leveraging Unity game
-          engine to build a multi-platform training game to have equal functionality on iOS, Android, WebGL, download
-          and Oculus.
+        <li>Spearheaded the migration of a legacy Java system to a Spring and AWS Lambda based infrastructure.</li>
+        <li>Leveraged Angular and Unity3D to build a multi-platform training application to have equal functionality on
+          iOS, Android, WebGL, VR, and standalone download.
         </li>
-        <li>Modernized analytical system by standing up an ETL and Machine Learning Platform utilizing AWS SageMaker.
+        <li>Modernized analytical system by standing up an ETL and machine learning platform to predict employee
+          success.
         </li>
-        <li>Improved scalability, reduced infrastructure costs and enhanced system stability and availability using
-          auto-scaling, load balancing, and fault-tolerant architecture.
+        <li>Led scalability and availability overhaul of platforms adding auto-scaling, load balancing, and
+          fault-tolerant architecture.
         </li>
-        <li>Led DevOps showcasing an uptime of 99% over 9 years and thousands of users.</li>
-        <li>Stood up CI/CD platform utilizing Git, Jenkins and CodeDeploy. Identified and resolved technical issues,
-          resulting in improved rollout and rollback for future versions and eliminating downtime for new version
-          implementations.
+        <li>Managed platform’s DevOps showcasing an uptime of 99% over 9 years with thousands of users.</li>
+        <li>Stood up new CI/CD platform utilizing Git, Jenkins, and CodeDeploy, completely eliminating downtime for
+          releases and roll-backs.
         </li>
       </ul>
     </div>
@@ -53,18 +88,15 @@
       <h3>Kuma Reality Games - New York, NY</h3>
       <sub>Developer | Jun 2011 - Apr 2013</sub>
 
-      <p>A prominent game development company known for creating immersive TV games. Their innovative use of technology
-        and attention to detail has garnered praise and a dedicated fan base within the gaming industry.</p>
+      <p>Game development company known for creating immersive TV games and social media platforms.
+      </p>
 
       <ul>
-        <li>Conducted research on emerging technologies and trends in the industry, providing valuable insights for
-          proof-of-concept streaming audio platform to a fully featured web, iOS, and Android application.
+        <li>Piloted transformation of proof-of-concept streaming audio platform into a fully-featured web, iOS, and
+          Android platform.
         </li>
-        <li>Collaborated with senior developers to optimize performance and enhance user experience by transitioning
-          from Flash to HTML.
-        </li>
-        <li>Assisted in the development of prototypes, contributing to the design and implementation of new features in
-          English, French, Spanish, Arabic, and Farsi.
+        <li>Led modernization effort to transition away from Flash to a pure HTML browser based application.</li>
+        <li>Built out new localization platform capable of translating into English, French, Spanish, Arabic, and Farsi.
         </li>
       </ul>
     </div>
@@ -74,10 +106,8 @@
       <h3>BrandGames - New York, NY</h3>
       <sub>Lead Developer | Oct 2009 - Jun 2011</sub>
 
-      <p>A leading company specializing in the development of custom branded games and interactive experiences. With a
-        focus on gamification, they create engaging and immersive digital solutions. Their expertise lies in designing
-        and implementing interactive experiences that align with a marketing objective, enhancing customer engagement
-        and brand recognition.</p>
+      <p>Company specializing in the development of custom branded games and interactive experiences. With a focus on
+        gamification, they created engaging and immersive digital solutions.</p>
 
       <ul>
         <li>Developed marketing and training games for a variety of Fortune 500 companies, working primarily in Flash,
@@ -91,6 +121,10 @@
     <div>
       <h3>Rebel Monkey - New York, NY</h3>
       <sub>Game Developer | Oct 2008 - Jul 2009</sub>
+
+      <p>Game development company that specialized in creating unique and innovative casual games for various
+        platforms.</p>
+
       <ul>
         <li>Developed game prototypes, contributing to the design and implementation of gameplay features of Java server
           infrastructure launching the original cooperative based multiplayer games on EC2.

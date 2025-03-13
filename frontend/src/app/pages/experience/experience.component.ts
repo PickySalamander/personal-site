@@ -23,6 +23,11 @@ export class ExperienceComponent {
   /** List of items to put on the experience page, the text for each is in the {@link ExpDescriptionComponent} */
   list:ExperienceItem[] = [
     {
+      yearStart: 2024,
+      name: "AllaiHealth",
+      link: "allai"
+    },
+    {
       yearStart: 2022,
       name: "Self Employed",
       link: "self"
