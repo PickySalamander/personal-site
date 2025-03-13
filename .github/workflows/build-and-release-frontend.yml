@@ -1,4 +1,4 @@
-name: Build and Release Front End
+name: Build and Release Frontend
 run-name: "Building ${{ github.workflow }}-${{ github.ref_name }}"
 
 on:
