@@ -58,4 +58,4 @@ jobs:
 
       # Run the deploy
       - name: CDK Deploy
-        run: npm run deploy
+        run: npm run deploy -w backend
