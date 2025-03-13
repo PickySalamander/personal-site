@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf cdk.out",
     "synth": "cdk synth -quiet",
-    "deploy": "cdk depkoy  --require-approval never"
+    "deploy": "cdk deploy --require-approval never"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",

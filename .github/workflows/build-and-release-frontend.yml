@@ -1,4 +1,4 @@
-name: Build and Release Back End
+name: Build and Release Front End
 run-name: "Building ${{ github.workflow }}-${{ github.ref_name }}"
 
 on:
@@ -6,7 +6,7 @@ on:
 
   push:
     paths:
-      - 'backend/**'
+      - 'frontend/**'
     branches:
       - main
 
@@ -34,6 +34,8 @@ jobs:
       # Checkout the branch code from git
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
 
       # Authenticate with AWS
       - name: Configure AWS Credentials
@@ -56,6 +58,18 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Run the deploy
-      - name: CDK Deploy
-        run: npm run deploy -w backend
+      # Run the build
+      - name: Run Build
+        run: npm run build -w frontend
+
+      # Deploy
+      - name: Deploy to S3
+        run: |
+          cd frontend/dist/portfolio/browser
+          aws s3 sync --quiet --delete --exclude "index.html" . s3://jf-portfolio-web
+          aws s3 cp index.html s3://jf-portfolio-web/index.html \
+            --cache-control "max-age=0,no-cache,no-store,must-revalidate"
+
+      # Invalidate the CDN cache for the index
+      - name: Invalidate CDN Cache
+        run: aws cloudfront create-invalidation --distribution-id E1E52SK17Y9LID --paths "/*"
