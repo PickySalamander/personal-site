@@ -1,0 +1,50 @@
+@use "styles/globals";
+
+:host {
+  display: flex;
+  width: globals.$header-height;
+  height: 100%;
+  padding: #{2 * globals.$header-padding} globals.$header-padding;
+  border-right: 2px solid globals.$color-saffron;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: globals.$header-height;
+    border-right: none;
+    border-top: 2px solid globals.$color-saffron;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: 900px) {
+    flex-direction: row;
+  }
+
+  a {
+    padding: 5px;
+
+    svg {
+      display: block;
+      width: 28px;
+      height: 28px;
+    }
+
+    path {
+      fill: globals.$color-saffron;
+      transition: fill 500ms;
+    }
+
+    &:hover path {
+      fill: globals.$color-burnt-sienna;
+    }
+  }
+}

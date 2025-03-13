@@ -1,0 +1,33 @@
+<a class="icon" routerLink="/"></a>
+
+<div class="wide-menu">
+  @for (option of options; track option) {
+    <div class="option">
+      @if (option.routerLink) {
+        <a [routerLink]="option.routerLink" routerLinkActive="selected">{{ option.text }}</a>
+      } @else {
+        <a target="_blank" [href]="option.href">{{ option.text }}</a>
+      }
+    </div>
+  }
+</div>
+
+<div class="small-menu">
+  <button [cdkMenuTriggerFor]="menu">
+    <span class="mat-icon">menu</span>
+  </button>
+
+  <ng-template #menu>
+    <div class="drop" cdkMenu>
+      @for (option of options; track option) {
+        <div class="option" cdkMenuItem>
+          @if (option.routerLink) {
+            <a [routerLink]="option.routerLink" routerLinkActive="selected">{{ option.text }}</a>
+          } @else {
+            <a target="_blank" [href]="option.href">{{ option.text }}</a>
+          }
+        </div>
+      }
+    </div>
+  </ng-template>
+</div>

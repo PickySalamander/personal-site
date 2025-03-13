@@ -1,0 +1,40 @@
+@use "sass:color";
+@use "styles/globals";
+
+:host {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  .project {
+    position: relative;
+    background-color: color.adjust(globals.$color-charcoal, $lightness:10%);
+    border-radius: 8px;
+    padding: 0 1em;
+    color: globals.$color-saffron;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: globals.$color-burnt-sienna;
+
+      & > * {
+        transition: color 500ms;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+
+      .top, h1, h2, h3 {
+        color: globals.$color-sandy-brown;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@use "styles/globals";
+
+:host {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+$size: calc(#{globals.$header-height} - 2 * #{globals.$header-padding});
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-to {
+  to {
+    top: globals.$header-padding;
+    left: globals.$header-padding * 2;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.icon {
+  position: absolute;
+  background-image: url("/assets/personal-logo.svg");
+  height: $size;
+  width: $size;
+  top: calc(50% - #{$size} / 2);
+  left: calc(50% - #{$size} / 2);
+
+  animation-name: fade-in, slide-to, fade-out;
+  animation-delay: 500ms, 1500ms, 2700ms;
+  animation-duration: 500ms, 1000ms, 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-delay: 200ms;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}

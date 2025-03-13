@@ -1,0 +1,126 @@
+@use "styles/globals";
+
+:host {
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: globals.$header-height;
+  padding: globals.$header-padding #{2 * globals.$header-padding};
+  border-bottom: 2px solid globals.$color-saffron;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon {
+  display: block;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("/assets/personal-logo.svg");
+}
+
+.wide-menu {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  & > div {
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      color: globals.$color-saffron;
+      font-size: 1.25rem;
+      transition: all 500ms;
+      padding: 1rem;
+
+      &:hover, &.selected {
+        color: globals.$color-burnt-sienna;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: globals.$color-burnt-sienna;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      bottom: calc(-#{globals.$header-padding} - 5px);
+    }
+  }
+}
+
+.small-menu {
+  & > button {
+    border: 1px solid globals.$color-saffron;
+    border-radius: 4px;
+    padding: .5rem;
+    background: none;
+    color: globals.$color-saffron;
+    font-size: 24px;
+    transition: all 500ms;
+
+    &:hover, &:active {
+      border-color: globals.$color-burnt-sienna;
+      color: globals.$color-burnt-sienna;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.drop {
+  display: flex;
+  flex-direction: column;
+  background-color: globals.$color-charcoal;
+  border: 1px solid globals.$color-saffron;
+  border-radius: 4px;
+  margin-top: 1rem;
+
+  animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+
+  .option {
+    padding: 0.5rem 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid globals.$color-saffron;
+    }
+  }
+
+  a {
+    color: globals.$color-saffron;
+    font-size: 1.25rem;
+    transition: all 500ms;
+
+    &:hover, &.selected {
+      color: globals.$color-burnt-sienna;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .wide-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .small-menu {
+    display: none;
+  }
+}
