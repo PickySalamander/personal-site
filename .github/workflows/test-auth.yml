@@ -1,0 +1,25 @@
+# Use this script to verify that GitHub to AWS communication is running properly. This will not test that IAM
+# permissions work, it just checks that the connection is working.
+
+name: Test Authentication of GitHub to AWS
+run-name: Test Authentication of GitHub to AWS
+on: workflow_dispatch
+
+env:
+  AWS_REGION: "us-east-1"
+
+permissions:
+  id-token: write # This is required for requesting the JWT from AWS
+  contents: read  # This is required for actions/checkout
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_NUMBER }}:role/${{ vars.AWS_GITHUB_ROLE }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Sts GetCallerIdentity
+        run: aws sts get-caller-identity
