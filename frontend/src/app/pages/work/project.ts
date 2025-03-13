@@ -67,7 +67,7 @@ export const WorkProjects:Project[] = [
   {
     title: "UPtick",
     link: "uptick",
-    preview: "Before my current game, I worked on a software platform called UPtick for 9 years.",
+    preview: "Now called Sales Performance Predictor, it’s a sales training / performance analysis platform using simulations and games.",
     text: [
       "I worked on a software platform called UPtick for 9 years. Now called Sales Performance Predictor, it’s a sales training / performance analysis platform using simulations and games. It has two faces: one for everyday sales people and the other for their managers to gauge how their learning is progressing.",
       "The platform is similar to an <a href='https://en.wikipedia.org/wiki/Learning_management_system' target='_blank'>LMS</a>, allowing users to go through courses and play simulations of sales environments. In mock conversations users proceed through a branching dialogue, trying to make a sale to a virtual customer. Along the way they work with a virtual coach to review where they had room for improvement and learn new skills. Managers can then look at analytical platforms to see how their employees performed and provide them with additional training if needed. Originally, the platform was exclusively web-based, but over the years we added iOS, Android, and even VR applications to the stack." +
