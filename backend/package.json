@@ -10,6 +10,7 @@
     "deploy": "cdk deploy --require-approval never"
   },
   "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
     "@types/node": "^25.6.0",
     "aws-cdk": "2.1119.0",
     "rimraf": "^6.0.1",
