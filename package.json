@@ -3,5 +3,9 @@
 	"workspaces": [
 		"backend",
 		"frontend"
-	]
+	],
+	"devDependencies": {
+		"typescript": "~5.9.3"
+	},
+	"version": "2.1.0"
 }

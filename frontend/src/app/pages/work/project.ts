@@ -37,7 +37,7 @@ export const WorkProjects:Project[] = [
       "I’m currently working at a healthcare startup tasked with expanding and upgrading their patient medical history and documentation platform. The challenge was not only to modernize their legacy system, but to also introduce new features to streamline clinical workflows. I spearheaded the creation of a system that securely ingested patient medical histories, recorded audio from patient-doctor consultations, and leveraged cutting-edge AI to automatically generate comprehensive and accurate notes for patient charts.",
       "I also helped modernize the frontend architecture, adopting the latest frameworks to create a responsive and intuitive interface. Simultaneously, I tackled the backend, transforming it from a monolithic structure to a robust, serverless, distributed system. This architectural shift not only improved performance and scalability, but also laid the foundation for future feature enhancements."
     ],
-    code: "AWS Java Spring Angular TypeScript Postgres",
+    code: "AWS AI Java Spring Angular TypeScript Postgres",
     image: "/assets/allai.svg"
   },
   {
@@ -61,7 +61,7 @@ export const WorkProjects:Project[] = [
       "The application has a backend process that runs in AWS once a week with a complete frontend that reports on the scraping success.",
       "The full source code is <a href='https://github.com/PickySalamander/website-alerter' target='_blank'>here</a>."
     ],
-    code: "AWS CDK Angular TypeScript Docker Node.js",
+    code: "AI AWS CDK Angular TypeScript Docker Node.js",
     image: "/assets/website-alerter.png"
   },
   {
@@ -70,7 +70,7 @@ export const WorkProjects:Project[] = [
     preview: "Now called Sales Performance Predictor, it’s a sales training / performance analysis platform using simulations and games.",
     text: [
       "I worked on a software platform called UPtick for 9 years. Now called Sales Performance Predictor, it’s a sales training / performance analysis platform using simulations and games. It has two faces: one for everyday sales people and the other for their managers to gauge how their learning is progressing.",
-      "The platform is similar to an <a href='https://en.wikipedia.org/wiki/Learning_management_system' target='_blank'>LMS</a>, allowing users to go through courses and play simulations of sales environments. In mock conversations users proceed through a branching dialogue, trying to make a sale to a virtual customer. Along the way they work with a virtual coach to review where they had room for improvement and learn new skills. Managers can then look at analytical platforms to see how their employees performed and provide them with additional training if needed. Originally, the platform was exclusively web-based, but over the years we added iOS, Android, and even VR applications to the stack." +
+      "The platform is similar to an <a href='https://en.wikipedia.org/wiki/Learning_management_system' target='_blank'>LMS</a>, allowing users to go through courses and play simulations of sales environments. In mock conversations users proceed through a branching dialogue, trying to make a sale to a virtual customer. Along the way they work with a virtual coach to review where they had room for improvement and learn new skills. Managers can then look at analytical platforms to see how their employees performed and provide them with additional training if needed. Originally, the platform was exclusively web-based, but over the years we added iOS, Android, and even VR applications to the stack. " +
       "I worked on every part of the application from the Java servers to the Unity and Angular front-end. I spent the first year of the company building the entirety of the platform by myself from the ground up. After the initial product, I led a team developing and adding new features to UPtick. We even dabbled a bit into machine learning and prediction!",
     ],
     code: "AWS Java Spring Unity C# MySQL Angular TypeScript WebGL Android iOS Oculus",
@@ -81,7 +81,7 @@ export const WorkProjects:Project[] = [
     link: "this-site",
     preview: "I built this site from scratch using Angular / Typescript and hosted it on a variety of AWS services.",
     text: [
-      "I built this site from scratch using Angular / Typescript and hosted it on a variety of AWS services. It is hosted from S3, through CloudFront, and using Route53 nameservers. You can take a look at the code <a href='https://github.com/PickySalamander/personal-site' target='_blank'>here</a>!"
+      "I built this site from scratch using Angular / Typescript and hosted it on AWS S3 and CloudFront using Route53 nameservers. You can take a look at the code <a href='https://github.com/PickySalamander/personal-site' target='_blank'>here</a>!"
     ],
     code: "Angular Typescript AWS DNS",
     image: "/assets/personal-logo.svg"
